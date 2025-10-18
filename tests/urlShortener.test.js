@@ -1,6 +1,6 @@
-import request from 'supertest';
-import app from '../src/index.js'; // Import the app, no need to run it manually
-import pool from '../src/db.js'; // PostgreSQL connection
+const request = require('supertest');
+const app = require('../src/index'); // Import the app, no need to run it manually
+const pool = require('../src/db'); // PostgreSQL connection
 
 beforeAll(async () => {
     // Create test table
