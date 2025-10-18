@@ -1,6 +1,6 @@
-const express = require('express')
-const pool = require('./db')
-const { generateRandomWords } = require('./utils')
+import express from 'express'
+import pool from './db.js'
+import { generateRandomWords } from './utils.js'
 
 const router = express.Router()
 
@@ -36,4 +36,4 @@ router.get('/go/:path', async (req, res) => {
     res.redirect(result.rows[0].original_url)
 })
 
-module.exports = router
+export default router

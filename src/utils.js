@@ -4,4 +4,4 @@ const generateRandomWords = () => {
     return `${words[Math.floor(Math.random() * words.length)]}.${words[Math.floor(Math.random() * words.length)]}.${words[Math.floor(Math.random() * words.length)]}`
 }
 
-module.exports = { generateRandomWords }
+export { generateRandomWords }

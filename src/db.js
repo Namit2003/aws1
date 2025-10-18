@@ -1,6 +1,6 @@
-require('dotenv').config()
-
-const { Pool } = require('pg')
+import 'dotenv/config'
+import pkg from 'pg'
+const { Pool } = pkg
 
 const pool = new Pool({
     user: process.env.DB_USER || 'postgres',
@@ -22,4 +22,4 @@ pool.connect()
     })
     .catch(err => console.error('❌ Database connection error:', err))
 
-module.exports = pool
+export default pool
